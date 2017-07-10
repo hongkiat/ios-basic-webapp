@@ -1,0 +1,188 @@
+body {
+	background-image: url('../img/ios-linen.jpg');
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+* {
+	-webkit-transition: all 300ms ease-out;  
+	-moz-transition: all 300ms ease-out;
+	-ms-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+:focus, :active {
+    outline: 0;
+}
+
+.demo-wrapper {
+	color: #333;
+	width: ;
+}
+.ios-app {
+	width: 700px;
+	margin: 25px auto;
+	padding: 0;
+	border-radius: 3px;
+
+	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:    0 0 5px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:         0 0 5px 0 rgba(0, 0, 0, 0.3);
+	background: #c2cdd5;
+
+	position: relative;
+	overflow: hidden;
+}
+.app-topbar {
+	/*top: 0;*/
+	/*position: fixed;*/
+
+	width: 100%;
+	height: 40px;
+
+	background: #8675a6;
+	background: -moz-linear-gradient(top,  #8675a6 0%, #756494 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8675a6), color-stop(100%,#756494));
+	background: -webkit-linear-gradient(top,  #8675a6 0%,#756494 100%);
+	background: -o-linear-gradient(top,  #8675a6 0%,#756494 100%);
+	background: -ms-linear-gradient(top,  #8675a6 0%,#756494 100%);
+	background: linear-gradient(to bottom,  #8675a6 0%,#756494 100%);
+
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.app-topbar a.menu-link {
+	background-color: #55427A;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1em;
+    height: 30px;
+    left: 10px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: 5px;
+    width: 45px;
+    z-index: 2;
+}
+.app-topbar .app-title {
+	display: block;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 70%;
+	margin: 0;
+	height: 40px;
+	padding: 0 15%;
+	line-height: 43px;
+}
+.app-menu {
+	float: left;
+	width: 30%;
+	position: absolute;
+}
+.app-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.app-menu li a {
+	display: block;
+	padding: 20px;
+	color: #fff;
+	text-decoration: none;
+	font-size: .8em;
+	color: #758292;
+	border-bottom: 1px solid #a8b3bd;
+}
+.app-menu li a.active {
+	background-color: #a8b3bd;
+	color: #fff;
+}
+.app-post-list {
+	background-color: #fff;
+	float: right;
+	width: 70%;
+	
+	-webkit-box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:    0 -3px 5px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:         0 -3px 5px 0 rgba(0, 0, 0, 0.3);
+
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.app-post {
+	padding: 30px 20px 20px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.app-post:last-child {
+	border-bottom: 0; 
+}
+.app-post .app-title {
+	margin-top: 0;
+}
+.app-post .app-figure {
+	float: left;
+	margin-right: 20px;
+}
+.app-post .app-figure img {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+	-moz-box-shadow:    0 2px 2px -2px rgba(0, 0, 0, 0.52);
+	box-shadow:         0 2px 2px -2px rgba(0, 0, 0, 0.52);
+}
+.app-article {
+	font-size: 1em;
+}
+
+@media screen and (max-width: 700px) {
+	.ios-app {
+		width: 100%;
+		margin: 0 auto;
+		border-radius: 0;
+		background: #c2cdd5;
+	}
+	.app-topbar { 
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+	.app-menu {
+		width: 50%;
+	}
+	.app-post-list {
+		/*padding-top: 40px;*/
+		width: 100%;
+	}
+	.ios-app.active .app-post-list {
+		-webkit-transform: translateX(50%);
+		-moz-transform: translateX(50%);
+		-ms-transform: translateX(50%);
+		-o-transform: translateX(50%);
+		transform: translateX(50%);
+	}	
+}
